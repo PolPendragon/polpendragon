@@ -14,27 +14,19 @@
     <a-scene arjs>
         <a-marker preset="hiro"> <!-- MARCADOR  --> 
             <!--<a-entity position="0 0 0" scale="0.1 0.1 0.1">   --> 
-                <!-- ESFERA
-                      <a-sphere radius="15" color="red"></a-sphere>
-                      </a-sphere>
-                <!-- FIN ESFERA  -->
-       
-                <!-- CUBO
-                    <a-entity
-                         position="0 0 0"
-                         scale="1"
-                         gltf-model="https:/raw.githubusercontent.com/PolPendragon/polpendragon/main/cubo.glb"
-                    ></a-entity>
-                    <!-- CUBO FINAL -->
-                
-                <!-- primitive box-->
-                    <a-entity>
-                    <a-torus color="#43A367" arc="270" radius="5" radius-tubular="0.1"></a-torus>
-                        </a-entity>
+               
+                <!-- primitive box
+                    <a-entity geometry="primitive: box" material="color: red" scale="1 1 1"></a-entity>
+                primitive box final-->
 
-                <!-- primitive box FINAL -->
+            <!-- define your gltf asset -->
+            <a-assets>
+              <a-asset-item id="tree" src="tie.glb"></a-asset-item>
+            </a-assets>
+            <!-- use your gltf model -->
+            <a-entity gltf-model="##tree"></a-entity>
 
-            
+           
         </a-marker> <!-- ESTO CIERRA TODO EL MARCADOR  -->
         <a-entity camera position="0 0 0"></a-entity>
     </a-scene>
