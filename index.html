@@ -12,6 +12,12 @@
     
     <!-- AQUÍ EMPIEZA EL 3D  --> 
     <a-scene arjs>
+
+                 <!-- define your gltf asset -->
+                <a-assets>
+                  <a-asset-item id="tree" src="https://raw.githubusercontent.com/PolPendragon/polpendragon/main/tie.glb"></a-asset-item>
+                </a-assets>
+
         <a-marker preset="hiro"> <!-- MARCADOR  --> 
             <!--<a-entity position="0 0 0" scale="0.1 0.1 0.1">   --> 
                
@@ -19,10 +25,7 @@
                     <a-entity geometry="primitive: box" material="color: red" scale="1 1 1"></a-entity>
                 primitive box final-->
 
-            <!-- define your gltf asset -->
-            <a-assets>
-              <a-asset-item id="tree" src="https://raw.githubusercontent.com/PolPendragon/polpendragon/main/tie.glb"></a-asset-item>
-            </a-assets>
+            
             <!-- use your gltf model -->
             <a-entity gltf-model="#tree"></a-entity>
 
