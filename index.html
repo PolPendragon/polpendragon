@@ -6,50 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
 <body>
-
-<!-- AQUÍ EMPIEZA EL 3D  --> 
+    
+    <!-- AQUÍ EMPIEZA EL 3D  --> 
     <a-scene arjs>
         <a-marker preset="hiro"> <!-- MARCADOR  --> 
-            
-        <a-entity position="0 0 0" scale="0.1 0.1 0.1">  <!--   -->
-            
-            <!-- ESFERA  
-              <a-sphere radius="15" color="red"></a-sphere>
-            </a-sphere>
-            <!-- FIN ESFERA  -->
-
-            
-                                <!-- CUBO-->
-                                <a-entity
-                        position="0 0 0"
-                        scale="1"
-                        gltf-model="https:/raw.githubusercontent.com/PolPendragon/polpendragon/main/cubo.glb"
+            <a-entity position="0 0 0" scale="0.1 0.1 0.1">    
+                <!-- ESFERA
+                      <a-sphere radius="15" color="red"></a-sphere>
+                      </a-sphere>
+                <!-- FIN ESFERA  -->
+       
+                <!-- CUBO
+                    <a-entity
+                         position="0 0 0"
+                         scale="1"
+                         gltf-model="https:/raw.githubusercontent.com/PolPendragon/polpendragon/main/cubo.glb"
                     ></a-entity>
                     <!-- CUBO FINAL -->
+                
+                <!-- primitive box-->
+                    <a-entity geometry="primitive: box" material="color: red">
+                <!-- primitive box FINAL -->
 
             
- <!-- OTRO MODELADO PRUEBA CUBO
-            <a-entity 
-    gltf-model="cubo.glb" 
-    position="0 1 -3" 
-    scale="1 1 1" 
-    rotation="0 45 0">
-  </a-entity>
-<!-- FIN OTRO PRUEBA CUBO -->
-
-        </a-marker>
+        </a-marker> <!-- ESTO CIERRA TODO EL MARCADOR  -->
         <a-entity camera position="0 0 0"></a-entity>
     </a-scene>
 </body>
 </html>
 
-<!--<a-entity
-    position="0 0 0"
-    scale="1"
-    gltf-model="https://raw.githubusercontent.com/pedrovelasquez9/ARJS-example/main/tie.glb"
-></a-entity>-->
-
-<!--raw.githubusercontent.com/username/repo-name/branch-name/path-->
