@@ -20,21 +20,21 @@
                   <a-asset-item id="tree" src="clap.glb"></a-asset-item>
                 </a-assets>
 
-        <a-marker type='pattern' patternUrl='Marker01.patt'></a-marker>  <!-- MARCADOR  --> 
-       <!--  <a-marker preset="hiro"> MARCADOR  --> 
+        <a-marker preset="hiro"> <!-- MARCADOR  --> 
 
             <!--<a-entity position="0 0 0" scale="0.1 0.1 0.1">   --> 
                
-                <!-- primitive box-->
-                   <!-- <a-entity geometry="primitive: box" material="color: red" scale="1 1 1"></a-entity>-->
-               <!-- primitive box final-->
+                <!-- primitive box
+                    <a-entity geometry="primitive: box" material="color: red" scale="1 1 1"></a-entity>
+                primitive box final-->
 
             
-            <!-- use your gltf model  -->
+            <!-- use your gltf model -->
            <a-entity 
                    gltf-model="#tree" 
                    animation-mixer="loop: repeat" 
-                   position="0 0 0" rotation="90 0 0"></a-entity> 
+                   position="0 0 0" rotation="90 0 0">
+           </a-entity>
           
            
         </a-marker> <!-- ESTO CIERRA TODO EL MARCADOR  -->
