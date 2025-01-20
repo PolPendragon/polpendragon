@@ -10,18 +10,24 @@
         <a-camera gps-new-camera="gpsMinDistance: 5"></a-camera>
     </a-scene>
     <script>
-        // Código de JavaScript aquí
         window.onload = () => {
             let cylinderCreated = false;
 
             const camera = document.querySelector("[gps-new-camera]");
 
+            // Escucha el evento de actualización de posición GPS
             camera.addEventListener("gps-camera-update-position", (e) => {
+                console.log("GPS Position Update:", e.detail.position); // Mostrar posición en consola
                 if (!cylinderCreated) {
                     const { latitude, longitude } = e.detail.position;
 
+                    // Calcular posición 1 metro al norte
                     const northLatitude = latitude + 0.000009;
 
+                    console.log(`Original Lat: ${latitude}, Long: ${longitude}`);
+                    console.log(`New North Lat: ${northLatitude}, Long: ${longitude}`);
+
+                    // Crear el cilindro
                     const cylinderEntity = document.createElement("a-entity");
                     cylinderEntity.setAttribute("gps-new-entity-place", {
                         latitude: northLatitude,
@@ -35,9 +41,16 @@
                     cylinderEntity.setAttribute("material", { color: "blue" });
                     cylinderEntity.setAttribute("scale", "1 1 1");
 
+                    console.log("Adding cylinder to scene...");
                     document.querySelector("a-scene").appendChild(cylinderEntity);
-                    cylinderCreated = true;
+
+                    cylinderCreated = true; // Evitar crear más cilindros
                 }
+            });
+
+            // Si el GPS no está disponible, mostrar advertencia
+            camera.addEventListener("gps-camera-error", (error) => {
+                console.error("Error with GPS:", error);
             });
         };
     </script>
