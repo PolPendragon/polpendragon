@@ -1,45 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js">
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<title>AR.js A-Frame Location-based</title>
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/three.js/build/ar-threex-location-only.js'></script>
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js'></script>
 </head>
-
 <body>
-    
-    <!-- AQUÍ EMPIEZA EL 3D  --> 
-    <a-scene arjs>
+<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+    <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+    <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 19.434933; longitude: -99.140724" scale="10 10 10"></a-entity>
 
-                 <!-- define your gltf asset -->
-                <a-assets>
-                  <a-asset-item id="tree" src="clap.glb"></a-asset-item>
-                </a-assets>
-
-        <a-marker preset="hiro"> <!-- MARCADOR  --> 
-
-            <!--<a-entity position="0 0 0" scale="0.1 0.1 0.1">   --> 
-               
-                <!-- primitive box
-                    <a-entity geometry="primitive: box" material="color: red" scale="1 1 1"></a-entity>
-                primitive box final-->
-
-            
-            <!-- use your gltf model -->
-           <a-entity 
-                   gltf-model="#tree" 
-                   animation-mixer="loop: repeat" 
-                   position="0 0 0" rotation="-90 0 0">
-           </a-entity>
-          
-           
-        </a-marker> <!-- ESTO CIERRA TODO EL MARCADOR  -->
-       <!-- <a-entity camera position="0 0 0"></a-entity> -->
-    </a-scene>
+</a-scene>
 </body>
 </html>
-
