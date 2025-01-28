@@ -6,15 +6,15 @@
     <a-scene embedded arjs>
       <!-- Definir assets -->
       <a-assets>
-        <a-asset-item id="rio-obj" src="rio-05.glb"></a-asset-item>
+        <a-asset-item id="rio-glb" src="rio-05.glb"></a-asset-item>
       </a-assets>
 
       <!-- Marcador y modelo -->
       <a-marker preset="hiro">
         <a-entity 
-          obj-model="obj: #rio-obj" 
+          gltf-model="#rio-glb" 
           position="0 0 0" 
-          scale="0 0 0">
+          scale="0.025 0.025 0.025">
         </a-entity>
       </a-marker>
 
