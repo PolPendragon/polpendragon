@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
   <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs>
-      <!-- Definir el video como asset -->
-      <a-assets>
-        <video id="bola-video" src="bola02.mp4" autoplay="true" loop="true" crossorigin="anonymous"></video>
-      </a-assets>
-
-      <!-- Marcador y video -->
       <a-marker preset="hiro">
-        <!-- Ajustar la posición y la rotación para que el video esté frente al usuario -->
-        <a-plane 
-          src="#bola-video" 
-          position="0 0 0" 
-          rotation="0 0 0" <!-- Rotar el video para que se vea desde el frente -->
-          width="2" 
-          height="2">
-        </a-plane>
+        <!-- Agregamos el cubo -->
+        <a-box 
+          position="0 0.5 0" 
+          rotation="0 45 0" 
+          color="#4CC3D9" 
+          depth="0.5" 
+          height="0.5" 
+          width="0.5">
+        </a-box>
       </a-marker>
-
-      <!-- Cámara -->
       <a-entity camera></a-entity>
     </a-scene>
   </body>
