@@ -11,9 +11,11 @@
 
       <!-- Marcador y video -->
       <a-marker preset="hiro">
+        <!-- Ajustar la posición y la rotación para que el video esté frente al usuario -->
         <a-plane 
           src="#bola-video" 
           position="0 0 0" 
+          rotation="0 180 0" <!-- Rotar el video para que se vea desde el frente -->
           width="2" 
           height="2">
         </a-plane>
