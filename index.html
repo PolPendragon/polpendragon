@@ -8,6 +8,7 @@
     <a-scene embedded arjs>
       <!-- Definir assets -->
       <a-assets>
+        <!-- Ruta del modelo GLB -->
         <a-asset-item id="rio-glb" src="rio-05.glb"></a-asset-item>
       </a-assets>
 
@@ -16,7 +17,7 @@
         <a-entity 
           gltf-model="#rio-glb"
           position="0 0 0" 
-          scale="0.05 0.05 0.05"
+          scale="0.2 0.2 0.2"
           rotation="-90 0 0">
         </a-entity>
       </a-marker>
@@ -24,5 +25,11 @@
       <!-- Cámara -->
       <a-entity camera></a-entity>
     </a-scene>
+    <script>
+      // Detección de errores
+      document.querySelector("#rio-glb").addEventListener("error", (e) => {
+        console.error("Error al cargar el modelo GLB:", e);
+      });
+    </script>
   </body>
 </html>
