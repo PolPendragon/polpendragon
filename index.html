@@ -8,16 +8,16 @@
     <a-scene embedded arjs>
       <!-- Definir assets -->
       <a-assets>
-        <!-- Ruta del modelo GLB -->
-        <a-asset-item id="rio-glb" src="rio-05.glb"></a-asset-item>
+        <a-asset-item id="rio-obj" src="rio-01.obj"></a-asset-item>
+        <a-asset-item id="rio-mtl" src="rio-01.mtl"></a-asset-item>
       </a-assets>
 
       <!-- Marcador y modelo -->
       <a-marker preset="hiro">
         <a-entity 
-          gltf-model="#rio-glb"
+          obj-model="obj: #rio-obj; mtl: #rio-mtl" 
           position="0 0 0" 
-          scale="0.2 0.2 0.2"
+          scale="0.1 0.1 0.1"
           rotation="-90 0 0">
         </a-entity>
       </a-marker>
@@ -25,11 +25,5 @@
       <!-- Cámara -->
       <a-entity camera></a-entity>
     </a-scene>
-    <script>
-      // Detección de errores
-      document.querySelector("#rio-glb").addEventListener("error", (e) => {
-        console.error("Error al cargar el modelo GLB:", e);
-      });
-    </script>
   </body>
 </html>
