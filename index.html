@@ -8,14 +8,13 @@
     <a-scene embedded arjs>
       <!-- Definir assets -->
       <a-assets>
-        <a-asset-item id="rio-obj" src="rio-01.obj"></a-asset-item>
-        <a-asset-item id="rio-mtl" src="rio-01.mtl"></a-asset-item>
+        <a-asset-item id="rio-glb" src="cuboverde.glb"></a-asset-item>
       </a-assets>
 
       <!-- Marcador y modelo -->
       <a-marker preset="hiro">
         <a-entity 
-          obj-model="obj: #rio-obj; mtl: #rio-mtl" 
+          gltf-model="#rio-glb"
           position="0 0 0" 
           scale="0.1 0.1 0.1"
           rotation="-90 0 0">
