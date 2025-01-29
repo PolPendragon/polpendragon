@@ -12,19 +12,11 @@
     arjs="sourceType: webcam; debugUIEnabled: false; locationEnabled: true;"
     gps-camera="positionMinAccuracy: 20;">
     
-    <!-- Definir assets -->
-    <a-assets>
-      <a-asset-item id="rio-obj" src="rio-01.obj"></a-asset-item>
-      <a-asset-item id="rio-mtl" src="rio-01.mtl"></a-asset-item>
-    </a-assets>
-
-    <!-- Modelo ubicado al norte del usuario -->
+    <!-- Cargar y mostrar el modelo cuboverde.glb -->
     <a-entity
-      gps-entity-place="latitude: 0; longitude: 0"
-      obj-model="obj: #rio-obj; mtl: #rio-mtl"
-      position="0 0 0"
-      scale="0.1 0.1 0.1"
-      rotation="-90 0 0">
+      gps-entity-place="latitude: 0; longitude: 0" 
+      gltf-model="cuboverde.glb"
+      scale="1 1 1">
     </a-entity>
 
     <!-- Cámara con GPS -->
