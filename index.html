@@ -27,17 +27,17 @@
       background-color: #0056b3;
     }
 
-    .center-images {
+    .top-images {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 10px;
+      width: 100%;
       display: flex;
-      gap: 20px;
+      justify-content: space-between;
+      padding: 0 20px;
     }
 
-    .center-images img {
-      max-width: 100px;
+    .top-images img {
+      max-width: 50px;
       height: auto;
     }
   </style>
@@ -50,7 +50,7 @@
         id="mapa"
         gltf-model="mapa-02.glb" 
         position="-.005 0 0" 
-        scale="10 10 10">
+        scale="7 7 7">
       </a-entity>
     </a-marker>
 
@@ -64,8 +64,8 @@
     <button class="ui-button" onclick="adjustScale(0.9)">Reducir</button>
   </div>
 
-  <!-- Imágenes centradas -->
-  <div class="center-images">
+  <!-- Imágenes informativas en la parte superior -->
+  <div class="top-images">
     <img src="TE-blanco.png" alt="TE Blanco">
     <img src="mbm-bl.png" alt="MBM Blanco">
   </div>
