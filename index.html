@@ -14,7 +14,7 @@
     }
 
     .ui-button {
-      background-color: #cfe2eb;
+      background-color: #007BFF;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -24,7 +24,21 @@
     }
 
     .ui-button:hover {
-      background-color: #a7b6bc;
+      background-color: #0056b3;
+    }
+
+    .center-images {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      gap: 20px;
+    }
+
+    .center-images img {
+      max-width: 100px;
+      height: auto;
     }
   </style>
 </head>
@@ -48,6 +62,12 @@
   <div class="ui-container">
     <button class="ui-button" onclick="adjustScale(1.1)">Aumentar</button>
     <button class="ui-button" onclick="adjustScale(0.9)">Reducir</button>
+  </div>
+
+  <!-- Imágenes centradas -->
+  <div class="center-images">
+    <img src="TE-blanco.png" alt="TE Blanco">
+    <img src="mbm-bl.png" alt="MBM Blanco">
   </div>
 
   <script>
